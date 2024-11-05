@@ -65,7 +65,11 @@ const FormNew = () => {
     try {
       // TODO: change url to use an env variable to make it easier to change when deploying in different environments
       const response = await axios.post(
-        "http://ec2-34-219-155-200.us-west-2.compute.amazonaws.com:8000/clients/predictions",
+        // "http://ec2-34-219-155-200.us-west-2.compute.amazonaws.com:8000/clients/predictions",
+        
+        // currently change the url to localhost for debugging with the backend project
+        "http://127.0.0.1:8000/clients/predictions",
+
         formData
       );
       console.log(response);
